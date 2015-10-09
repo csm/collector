@@ -43,7 +43,6 @@
         <collector.jar-path>${collector.share-path}/${project.artifactId}.jar</collector.jar-path>
         <collector.jvm-opts>-Xms12m -Xmx64m</collector.jvm-opts>
 
-        <sigar.version>1.6.4</sigar.version>
         <jackson.version>2.5.3</jackson.version>
         <retrofit.version>1.9.0</retrofit.version>
         <guice.version>4.0</guice.version>
@@ -146,17 +145,6 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-jul</artifactId>
             <version>${log4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.fusesource</groupId>
-            <artifactId>sigar</artifactId>
-            <version>${sigar.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

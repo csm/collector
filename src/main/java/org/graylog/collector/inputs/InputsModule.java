@@ -17,8 +17,6 @@
 package org.graylog.collector.inputs;
 
 import org.graylog.collector.guice.CollectorModule;
-import org.graylog.collector.inputs.eventlog.WindowsEventlogInput;
-import org.graylog.collector.inputs.eventlog.WindowsEventlogInputConfiguration;
 import org.graylog.collector.inputs.file.FileInput;
 import org.graylog.collector.inputs.file.FileInputConfiguration;
 import org.graylog.collector.utils.Utils;
@@ -31,13 +29,5 @@ public class InputsModule extends CollectorModule {
                 FileInput.Factory.class,
                 FileInputConfiguration.class,
                 FileInputConfiguration.Factory.class);
-
-        if (Utils.isWindows()) {
-            registerInput("windows-eventlog",
-                    WindowsEventlogInput.class,
-                    WindowsEventlogInput.Factory.class,
-                    WindowsEventlogInputConfiguration.class,
-                    WindowsEventlogInputConfiguration.Factory.class);
-        }
     }
 }
